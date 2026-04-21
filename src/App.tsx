@@ -27,6 +27,14 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
+
   const navLinks = [
     { name: "O nas", href: "#o-nas" },
     { name: "Galeria", href: "#galeria" },
@@ -35,9 +43,9 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-art-bg selection:bg-art-gold/30 font-sans text-art-ink border-8 border-white">
+    <div className="min-h-screen bg-art-bg selection:bg-art-gold/30 font-sans text-art-ink sm:border-8 border-white overflow-x-hidden">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-x-8 border-white ${isScrolled ? 'bg-white/90 backdrop-blur-md h-20 shadow-sm' : 'bg-transparent h-28'}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 sm:border-x-8 border-white ${isScrolled ? 'bg-white/90 backdrop-blur-md h-20 shadow-sm' : 'bg-transparent h-28'}`}>
         <div className="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-full border border-art-gold flex items-center justify-center overflow-hidden bg-white shrink-0 group-hover:scale-110 transition-transform">
@@ -67,7 +75,7 @@ export default function App() {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className={`lg:hidden p-2 rounded-lg transition-colors ${isScrolled ? 'text-art-ink hover:bg-stone-100' : 'text-white hover:bg-white/10'}`}
+            className={`lg:hidden p-2 rounded-lg transition-colors z-50 ${isMenuOpen || isScrolled ? 'text-art-ink hover:bg-stone-100' : 'text-white hover:bg-white/10'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -78,7 +86,7 @@ export default function App() {
         <motion.div 
           initial={false}
           animate={{ height: isMenuOpen ? "100vh" : 0 }}
-          className="lg:hidden absolute top-0 left-0 right-0 bg-white overflow-hidden z-40 border-x-8 border-white"
+          className="lg:hidden absolute top-0 left-0 right-0 bg-white overflow-hidden z-40 sm:border-x-8 border-white"
         >
           <div className="flex flex-col items-center justify-center h-full space-y-10 p-8">
              {navLinks.map((link) => (
