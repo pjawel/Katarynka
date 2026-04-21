@@ -123,7 +123,7 @@ export default function App() {
             className="max-w-3xl"
           >
             <h2 className="text-white/80 text-xs uppercase tracking-[0.4em] font-bold mb-6 italic">Witamy w Katarynce</h2>
-            <h1 className="text-7xl md:text-9xl text-white font-display italic leading-[0.85] tracking-tighter mb-8">
+            <h1 className="text-5xl sm:text-7xl md:text-9xl text-white font-display italic leading-tight md:leading-[0.85] tracking-tighter mb-8">
               Sztuka <br />
               <span className="text-art-gold">Celebracji</span>
             </h1>
@@ -206,7 +206,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
             <div className="space-y-4">
               <span className="text-art-gold text-xs uppercase tracking-[0.4em] font-bold">Galeria Zdjęć</span>
-              <h2 className="text-5xl md:text-7xl font-display italic leading-none">Estetyka <br /> <span className="text-art-gold">Katarynki</span></h2>
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-display italic leading-tight">Estetyka <br /> <span className="text-art-gold">Katarynki</span></h2>
             </div>
             <p className="max-w-sm text-white/50 text-sm leading-relaxed italic border-l border-white/20 pl-6">
               Zapraszamy do wizualnej podróży przez nasze sale, dekoracje i momenty, które u nas ożywają.
@@ -320,7 +320,7 @@ export default function App() {
       <section id="kontakt" className="py-32 bg-stone-100">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-6xl md:text-8xl font-display italic text-art-ink leading-none">Rozpocznijmy <br /> Państwa <span className="text-art-gold">Historię</span></h2>
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-display italic text-art-ink leading-tight">Rozpocznijmy <br /> Państwa <span className="text-art-gold">Historię</span></h2>
             <p className="text-art-muted text-lg italic font-display leading-relaxed">
               Dostępność terminów na lata 2025 i 2026 jest ograniczona. Skontaktuj się z nami, aby zarezerwować termin i omówić szczegóły Twojego wydarzenia.
             </p>
