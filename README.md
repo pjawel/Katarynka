@@ -1,11 +1,24 @@
-<div align="center">
+# Sala Bankietowa Katarynka
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Strona internetowa Sali Bankietowej Katarynka w Mońkach.
 
-  <h1>Built with AI Studio</h2>
+## Wdrożenie przez GitHub Actions
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+Strona jest skonfigurowana do automatycznego wdrażania na **GitHub Pages** przy każdym wypchnięciu (push) do gałęzi `main`.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### Instrukcja konfiguracji na GitHubie:
+1. Wypchnij kod do swojego repozytorium na GitHub.
+2. Wejdź w **Settings** -> **Pages**.
+3. W sekcji **Build and deployment** -> **Source** wybierz **GitHub Actions**.
+4. Workflow w `.github/workflows/deploy.yml` zajmie się resztą.
 
-</div>
+### Rozwój lokalny
+```bash
+npm install
+npm run dev
+```
+
+### Budowanie produkcyjne
+```bash
+npm run build
+```
